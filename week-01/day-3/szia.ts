@@ -1,4 +1,5 @@
-/* 
+
+/*
 let i1= 10;
 let i2= 3;
 let isquare=i2*i2;
@@ -64,7 +65,3 @@ if(d%4==0 && time<200){
 }
 
 console.log(out3);
-
-if(f1>f2){
-    boolean=true;
-}
