@@ -13,11 +13,3 @@ function appendAFunc(szoveg){
 }
 console.log(appendAFunc(typo));
 
-function sum (megadottszam: number){
-    let summarize: number = 0;
-    for (let i: number = 0; i <= megadottszam; i++) {
-    summarize = summarize+i;
-    }
-    return summarize;
- }
- console.log(sum(10));
