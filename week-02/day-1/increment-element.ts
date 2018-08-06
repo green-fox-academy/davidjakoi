@@ -3,5 +3,7 @@
 // -  Log the third element to the console
 
 let numList: number[] = [1,2,3,4,5];
+
 numList[2]++;
+
 console.log(numList[2]);

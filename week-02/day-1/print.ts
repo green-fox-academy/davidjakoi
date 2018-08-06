@@ -2,10 +2,10 @@
 //    which logs to the console the input parameters
 //    (can have multiple number of arguments)
 
-function printParams(para1: string, ...paraRest: string[]){
+function printParams(...paraRest){
 
-    console.log(para1 + "," + paraRest);
+    console.log(paraRest);
 
 }
 
-printParams("egy","ketto","harom");
+printParams(1,2,3);
