@@ -5,3 +5,8 @@
 //	   -  do it with creating a new temp array and a loop
 // -  Print the elements of the reversed `numList`
 
+let numList: number [] = [3,4,5,6,7];
+
+numList = numList.reverse();
+
+console.log(numList);
