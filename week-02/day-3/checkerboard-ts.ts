@@ -6,39 +6,27 @@ const ctx = canvas.getContext('2d');
 // DO NOT TOUCH THE CODE ABOVE THIS LINE
 // Fill the canvas with a checkerboard pattern.
 
+let x: number = 0;
+let y: number = 0;
+let size: number = 40;
+for(let i: number = 0; i<size; i++){
+    ctx.fillRect(x,y,size,size);
+    
+    for(let z: number = 0; z<30; z++){
+        ctx.fillRect(x,y,size,size);
+        
 
-for(let i: number = 0; i<12; i++){
-    
-    let x: number = 0;
-    let y: number = 0;
-    
+        if(z % 2 === 0){
+            x += size;
 
-    
-        if(i % 2 === 0){
-            ctx.fillStyle = "white";
-        }else{
-        ctx.fillStyle = "black";
-        ctx.fillRect(x,y,50,50);
+            }else if(z % 2 != 0){
+            y += size;
         }
-        x += 50;
+            
     }
-
-        
-
-for(let i = 0; i<8; i++){
-
-    let x: number = 0;
-    let y: number = 0;
-    
-
-    if( i % 2 === 0){
-        ctx.fillStyle = "white";
-        else{
-            ctx.fillStyle = "black";
-            ctx.fillRect(x,y,50,50);
-        }
-        
-            }
-        
-           y += 50;
 }
+
+    
+        
+
+        
