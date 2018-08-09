@@ -16,11 +16,7 @@ let hashmap = {
   3: 'say goodbye '
 };
 
-
-
-notSoCrypticMessage.forEach(element => {
-    if(element == )
-});
-out.concat(hashmap.)
-
-console.log(out)
+for( let i:number = 0; i<notSoCrypticMessage.length; i++){
+    out=out.concat(hashmap[notSoCrypticMessage[i]]);
+}
+console.log(out);
