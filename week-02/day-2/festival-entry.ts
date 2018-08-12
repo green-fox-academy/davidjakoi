@@ -23,8 +23,8 @@ const queue: any[] = [
 
 function securityCheck(list){
     list.forEach(element => {
-        if(element.guns === 1){
-            watchlist.push(element);
+        if(element.guns > 0){
+            watchlist.push(element.name);
         }
         if(element.alcohol > 0){
             securityAlcoholLoot += element.alcohol;
@@ -35,7 +35,7 @@ function securityCheck(list){
 }
 
 securityCheck(queue);
-console.log(queue);
+
 console.log(securityAlcoholLoot);
 console.log(watchlist);
 
