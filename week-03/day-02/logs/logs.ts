@@ -25,7 +25,14 @@ function makeUnique(arr){
 makeUnique(splittedList);
 console.log(uniqueArray);
 
+let getArray: string[];
+let postArray: string[];
 
-function ratio(){
-    
+getArray = splittedList.filter(element => element[2] === "GET /").map(element =>{return element[2];})
+postArray = splittedList.filter(element => element[2] === "POST /").map(element =>{return element[2];})
+  
+function ratio(getList, postList){
+    return getList.length/postList.length;
 }
+
+console.log(ratio(getArray,postArray));
