@@ -17,9 +17,5 @@ class Animal {
     }
 }
 
-let cat: Animal = new Animal();
+let cat: Animal = new Animal(40,40);
 let dog: Animal = new Animal();
-console.log(cat,dog);
-cat.play();
-dog.eat();
-console.log(cat,dog);
