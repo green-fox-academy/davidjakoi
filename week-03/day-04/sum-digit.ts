@@ -16,4 +16,4 @@ function sumOfDigits(num){
     }
 }
 
-console.log(sumOfDigits(3545));
+console.log(sumOfDigits(12));
