@@ -1,4 +1,12 @@
-class Domino {
+import { Comparable } from "./comparable";
+
+class Domino implements Comparable{
+    compareTo(other: Comparable): number {
+        dominoes.sort(function (a: Domino , b: Domino): number {
+            return a.compareTo(b);
+          });
+          
+    }
     values: number[];
     constructor(valueA: number, valueB: number) {
         this.values = [valueA, valueB];

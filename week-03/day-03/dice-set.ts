@@ -37,25 +37,14 @@ class DiceSet {
 }
 
 let diceSet = new DiceSet();
-/*diceSet.roll();
-diceSet.getCurrent();
-console.log("------------------");
-diceSet.reroll();
-diceSet.getCurrent();
-console.log("------------------");
-diceSet.getCurrent(5);
-diceSet.reroll();
-diceSet.getCurrent();
-console.log("------------------");
-diceSet.reroll(4);
-diceSet.getCurrent();*/
+
 function checkIf6(dice){
-    return dice == 6;
+  return dice == 6;
 }
 
 do {
-    diceSet.roll();
-    diceSet.reroll();
-    console.log(diceSet.dices);
+  diceSet.roll();
+  diceSet.reroll();
+  console.log(diceSet.dices);
 } while (!diceSet.dices.every(checkIf6));
 

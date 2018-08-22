@@ -4,11 +4,12 @@
 // previous two values, so the whole sequence is: 0, 1, 1, 2, 3, 5, 8, 13, 21
 // and so on. Define a recursive fibonacci(n) method that returns the nth
 // fibonacci number, with n=0 representing the start of the sequence.
-let fibo: number[] = [0,1];
-let i: number = 0;
-    let j: number = 1;
+
+
 function fibonacci(n){
-    
+    let fibo: number[] = [0,1];
+    let i: number = 0;
+    let j: number = 1;
 
     if(n == fibo.length){
         return n + "th number is: " + fibo[n-1];
@@ -17,10 +18,10 @@ function fibonacci(n){
     fibo.push(fibo[i] + fibo[j]);
     i ++;
     j ++;
-    console.log(fibo);
     return fibonacci(n);
     }
 
 }
 
 console.log(fibonacci(10));
+console.log(fibonacci(2));
