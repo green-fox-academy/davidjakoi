@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  background: yellow;
+  justify-content: center;
+  align-items: center;
+}
+
+.purple {
+  background: purple;
+  /* flex-grow: 1; */
+  height: 200px;
+  width: 200px;
+  justify-content: center;
+}
