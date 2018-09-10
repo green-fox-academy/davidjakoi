@@ -1,0 +1,16 @@
+.container {
+  background: yellowgreen;
+  height: 400px;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0px;
+}
+
+.item {
+  background: purple;
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
