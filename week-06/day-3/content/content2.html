@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: innerHTML, textContent</title>
+  </head>
+
+  <body>
+    <ul class="list">
+      <li>placeholder</li>
+      <li>placeholder</li>
+      <li>placeholder</li>
+      <li>placeholder</li>
+    </ul>
+
+
+    <script>
+      /*1) replace the list items' content with items from this list:
+      ['apple', 'banana', 'cat', 'dog']
+      2) change the <ul> element's background color to 'limegreen'
+        - use css class to change the color instead of the style property*/
+      let newContent = ['apple', 'banana', 'cat', 'dog'];
+      let listItems = document.querySelectorAll('li');
+      for (let i = 0; i < newContent.length; i++) {
+        listItems[i].innerText = newContent[i];
+      }
+      let myList = document.getElementsByClassName('list');
+      console.log(myList);
+      myList[0].setAttribute('style', 'background-color: limegreen');
+
+    </script>
+
+  </body>
+
+</html>
