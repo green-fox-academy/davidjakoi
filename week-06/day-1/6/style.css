@@ -1,0 +1,21 @@
+.header {
+  background: purple;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.firstThreeItem {
+  background: cornflowerblue;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.lastTwoItem {
+  background: cornflowerblue;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
