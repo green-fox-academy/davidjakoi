@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: onclick</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      div {
+        height: 100vh;
+      }
+
+      .party {
+        background: url(https://media.giphy.com/media/4c4jQPdVv381G/giphy.gif);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <button>Party</button>
+    </div>
+
+
+    <script>
+      /*Turn the party on and off by clicking the button. (the whole page)*/
+      let myButton = document.querySelector('button');
+      let theBody = document.querySelector('body');
+      myButton.onclick = function () {
+        if (theBody.className != 'party') {
+          theBody.setAttribute('class', 'party');
+        } else {
+          theBody.setAttribute('class', '');
+        }
+      }
+
+    </script>
+
+  </body>
+
+</html>

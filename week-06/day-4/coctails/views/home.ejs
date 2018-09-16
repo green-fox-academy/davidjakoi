@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coctails</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/main.css" />
+    <script src="main.js"></script>
+  </head>
+
+  <body>
+    <h1>Coctails</h1>
+    <h2>
+      <%=alcoholList%>
+    </h2>
+    <% for(let i = 0; i < forwardedCocktails.length; i++){ %>
+    <ul>
+      <li>
+        <h4>
+          <%= forwardedCocktails[i].name %>
+        </h4>
+        <% if(forwardedCocktails[i].isAlcoholic != true){ %>
+        <% %> 'non-alcoholic'
+        <% %>
+        <% } %>
+        <%= forwardedCocktails[i].contains %>
+        <%= forwardedCocktails[i].price %>
+      </li>
+    </ul>
+    <% } %>
+  </body>
+
+</html>

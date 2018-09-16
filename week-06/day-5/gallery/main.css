@@ -1,0 +1,118 @@
+body {
+  background-image: linear-gradient(darkgrey, gainsboro);
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 600px;
+}
+
+#imageContainer {
+  display: flex;
+  width: 750px;
+  margin: 20px;
+  border: 0;
+}
+
+#imageAndText {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+#mainImage {
+  width: 650px;
+  height: 421.875px;
+  z-index: 1;
+}
+
+#imageTextContainer {
+  background: darkgrey;
+  width: 650px;
+  height: 80px;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 2;
+  padding-top: 20px;
+}
+
+button {
+  width: 50px;
+  cursor: pointer;
+}
+
+#thumbNailContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+}
+
+.thumbNail {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  filter: drop-shadow(0px 14px 10px black);
+  transition: transform .1s;
+}
+
+.thumbNail:hover {
+  /* transform: scale(1.2); */
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  z-index: 1;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  background: linear-gradient(deepskyblue, dodgerblue);
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#buttons {
+  display: flex;
+  align-content: space-between;
+  height: 30px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.effectButton {
+  background: linear-gradient(deepskyblue, dodgerblue);
+  height: 30px;
+  text-align: center;
+  width: 80px;
+  margin-left: 5px;
+  border: 0;
+}
+
+.arrowButtons {
+  background: linear-gradient(dimgrey, lightgray);
+}
+
+.far {
+  position: absolute;
+  z-index: 1;
+  color: tomato;
+}
+
+.far:hover {
+  transform: scale(1.1);
+}
+
+.thumbNailAndLogo {
+  display: flex;
+  margin: 0px 10px 0px 0px;
+  width: 100px;
+}
+
+.thumbNailAndLogo:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Image Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div id='buttons'>
+      <label onclick='addFile()' class="custom-file-upload">
+        <input type="file" />
+        Add your own image
+      </label>
+      <button onclick="makeItBlur()" class='effectButton'>Blur</button>
+      <button onclick="makeItBlackAndWhite()" class='effectButton'>Grayscale</button>
+      <button onclick="makeItSepia()" class='effectButton'>Sepia</button>
+    </div>
+    <div id='imageContainer'>
+      <button onclick="goLeft()" class='arrowButtons'><img src="images/arrow.svg"></button>
+      <div id='imageAndText'>
+        <img src='images/img1.jpg' id='mainImage'>
+        <div id='imageTextContainer'></div>
+      </div>
+      <button onclick="goRight()" class='arrowButtons'><img src="images/arrow.svg" style='transform: rotate(180deg)'></button>
+    </div>
+    <div id='thumbNailContainer'>
+      <div class="thumbNailAndLogo">
+        <img src='images/img1.JPG' onclick='chooseImage()' class='thumbNail' alt='This is the beautiful beach of Bournemouth.'>
+        <i class="far fa-times-circle" onclick="deleteThumbNail()"></i>
+      </div>
+      <div class="thumbNailAndLogo">
+        <img src='images/img2.JPG' onclick='chooseImage()' class='thumbNail' alt='This is the view from the Isle of Wight. In the background you can see Bournemouth.'>
+        <i class="far fa-times-circle" onclick="deleteThumbNail()"></i>
+      </div>
+      <div class="thumbNailAndLogo">
+        <img src='images/img3.JPG' onclick='chooseImage()' class='thumbNail' alt='Probably this is the most beautiful picture that I ever took. On the way to Southampton.'>
+        <i class="far fa-times-circle" onclick="deleteThumbNail()"></i>
+      </div>
+      <div class="thumbNailAndLogo">
+        <img src='images/img4.JPG' onclick='chooseImage()' class='thumbNail' alt='The view from Christchurch. In the background you can see Borunemouth.'>
+        <i class="far fa-times-circle" onclick="deleteThumbNail()"></i>
+      </div>
+      <div class="thumbNailAndLogo">
+        <img src='images/img5.JPG' onclick='chooseImage()' class='thumbNail' alt='Warsaw at sunset.'>
+        <i class="far fa-times-circle" onclick="deleteThumbNail()"></i>
+      </div>
+      <div class="thumbNailAndLogo">
+        <img src='images/img6.JPG' onclick='chooseImage()' class='thumbNail' alt='The beach of Poole.'>
+        <i class="far fa-times-circle" onclick="deleteThumbNail()"></i>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+
+</html>
