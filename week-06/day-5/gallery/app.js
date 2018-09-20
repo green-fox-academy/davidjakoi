@@ -9,6 +9,8 @@ let input = document.querySelector('input');
 input.addEventListener('change', addFile);
 currentImageText.innerText = myImages[0].alt;
 
+setInterval(goRight, 3000);
+
 function goLeft() {
   if (thumbNailIndex === 0) {
     thumbNailIndex = myImages.length - 1;
@@ -33,7 +35,7 @@ function goRight() {
   currentImage.src = myImages[thumbNailIndex].src;
   myImages[thumbNailIndex].style = 'border: 2px solid deepskyblue';
   currentImageText.innerText = myImages[thumbNailIndex].alt;
-}
+};
 
 function chooseImage() {
 
@@ -53,10 +55,20 @@ function chooseImage() {
 function addFile() {
   let newFiles = input.files;
   let newImage = document.createElement('img');
+  let newDiv = document.createElement('div');
+  let newI = document.createElement('i');
+
+  newI.setAttribute('class', 'far fa-times-circle');
+  newI.setAttribute('onclick', 'deleteThumbNail()');
+  newDiv.setAttribute('class', 'thumbNailAndLogo');
+  newImage.setAttribute('class', 'thumbNail');
   newImage.src = `images/${newFiles[0].name}`;
   newImage.setAttribute('class', 'thumbNail');
-  newImage.setAttribute('onclick', 'chooseImage()')
-  thumbNailContainer.appendChild(newImage);
+  newImage.setAttribute('onclick', 'chooseImage()');
+
+  thumbNailContainer.appendChild(newDiv);
+  newDiv.appendChild(newImage);
+  newDiv.appendChild(newI);
   myImages.push(newImage);
 }
 
@@ -88,8 +100,8 @@ function makeItSepia() {
 function deleteThumbNail() {
   console.log(myImages);
   let parent = event.target.parentElement;
-  parent.removeChild(parent.firstChild);
+  let imageToDelete = parent.querySelector('img');
+  parent.removeChild(imageToDelete);
   parent.removeChild(event.target);
-
-  console.log(myImages);
+  thumbNailContainer.removeChild(parent);
 }
