@@ -1,0 +1,23 @@
+body {
+  height: 1000px;
+  background-image: radial-gradient(lightgrey, grey);
+}
+
+#inputField {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  background: lightblue;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input {
+  height: 50px;
+}
+
+button {
+  height: 50px;
+}

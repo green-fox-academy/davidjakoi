@@ -9,7 +9,7 @@ let input = document.querySelector('input');
 input.addEventListener('change', addFile);
 currentImageText.innerText = myImages[0].alt;
 
-setInterval(goRight, 3000);
+let mySetInterval = setInterval(goRight, 3000);
 
 function goLeft() {
   if (thumbNailIndex === 0) {
@@ -57,6 +57,7 @@ function addFile() {
   let newImage = document.createElement('img');
   let newDiv = document.createElement('div');
   let newI = document.createElement('i');
+  let newEditButton = document.createElement('i');
 
   newI.setAttribute('class', 'far fa-times-circle');
   newI.setAttribute('onclick', 'deleteThumbNail()');
@@ -65,11 +66,15 @@ function addFile() {
   newImage.src = `images/${newFiles[0].name}`;
   newImage.setAttribute('class', 'thumbNail');
   newImage.setAttribute('onclick', 'chooseImage()');
+  newEditButton.setAttribute('class', 'far fa-edit');
+  newEditButton.setAttribute('onclick', `editText(${myImages.length})`);
 
   thumbNailContainer.appendChild(newDiv);
   newDiv.appendChild(newImage);
   newDiv.appendChild(newI);
+  newDiv.appendChild(newEditButton);
   myImages.push(newImage);
+
 }
 
 function makeItBlur() {
@@ -104,4 +109,33 @@ function deleteThumbNail() {
   parent.removeChild(imageToDelete);
   parent.removeChild(event.target);
   thumbNailContainer.removeChild(parent);
+}
+
+let inputField = document.createElement('input');
+let myForm = document.createElement('form');
+
+function submitText(imgIndex) {
+  myImages[imgIndex].alt = inputField.value;
+  currentImageText.removeChild(myForm);
+}
+
+function editText(imgIndex) {
+  clearInterval(mySetInterval);
+
+  let label = document.createElement('label');
+  let buttonToSubmit = document.createElement('button');
+
+  buttonToSubmit.innerText = 'Submit';
+  label.innerText = 'Enter your new text: ';
+  label.setAttribute = ('for', 'newText');
+  inputField.setAttribute('type', 'text');
+  inputField.setAttribute('id', 'newText');
+  inputField.setAttribute('name', 'name');
+  buttonToSubmit.setAttribute('type', 'button');
+  buttonToSubmit.setAttribute('onclick', `submitText(${imgIndex})`);
+
+  currentImageText.appendChild(myForm); -
+    myForm.appendChild(label);
+  myForm.appendChild(inputField);
+  myForm.appendChild(buttonToSubmit);
 }
