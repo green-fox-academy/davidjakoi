@@ -1,0 +1,96 @@
+button {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  background: #222;
+  border: 0;
+  position: relative;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.firstButton:hover::after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #222;
+  border-width: 5px;
+  margin-top: -5px;
+}
+
+.secondButton:hover::after {
+  left: 100%;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-left-color: #222;
+  border-width: 5px;
+  margin-top: -5px;
+}
+
+.firstButton:hover+.firstDiv {
+  display: block;
+}
+
+.secondButton:hover+.secondDiv {
+  display: block;
+}
+
+.fa-trash-alt {
+  color: whitesmoke;
+}
+
+.fa-check {
+  color: whitesmoke;
+}
+
+.fa-trash-alt:hover {
+  color: #900009;
+}
+
+.fa-check:hover {
+  color: #2a960d;
+}
+
+.buttonContainer {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.firstDiv {
+  display: none;
+  background: #900009;
+  width: 150px;
+  height: 50px;
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+.secondDiv {
+  display: none;
+  background: #2a960d;
+  width: 150px;
+  height: 50px;
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}

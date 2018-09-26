@@ -1,0 +1,39 @@
+button {
+  width: 150px;
+  height: 60px;
+  border-radius: 15px;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+button:hover {
+  filter: brightness(1.25);
+}
+
+button:active {
+  filter: brightness(0.75);
+}
+
+button:focus {
+  outline: 0;
+}
+
+.green {
+  background: #02ac1e;
+  border-style: solid;
+  border-width: 0px 0px 5px 0px;
+  border-color: #1a5e25;
+}
+
+.blue {
+  background: #10aded;
+  border-style: solid;
+  border-width: 0px 0px 5px 0px;
+  border-color: #1e77e2;
+}
+
+.red {
+  background: #b20;
+  border-style: solid;
+  border-width: 0px 0px 5px 0px;
+  border-color: #900009;
+}

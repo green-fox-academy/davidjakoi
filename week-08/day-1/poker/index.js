@@ -1,6 +1,5 @@
-let cardDeck = [];
+// Black: 2H 3D 5S 9C KD White: 2C 3H 4S 8C AH
 
-for (let i = 0; i < 52; i++) {
-  cardDeck[i] = (Math.ceil(Math.random() * 52));
-  console.log(cardDeck[i]);
+function pair(hand1) {
+
 }
