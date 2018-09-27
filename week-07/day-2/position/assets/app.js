@@ -17,7 +17,7 @@ function getCoordinates() {
       myMap.setAttribute('width', '800');
       myMap.setAttribute('height', '550');
       myMap.setAttribute('frameborder', '0');
-      myMap.setAttribute('style', 'border:0');
+      myMap.setAttribute('style', 'border:1px solid black');
       myMap.setAttribute('src', `https://www.google.com/maps/embed/v1/place?key=AIzaSyBroxirltG9wAmi2RPM7zgJDMfqDBY32x8&q=${results[0].lat},${results[0].lon}&zoom=12`);
       inputField.appendChild(myMap);
     }
